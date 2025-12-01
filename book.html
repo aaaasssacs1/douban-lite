@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Douban Lite - 读书</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner-header">
+            <div class="logo">Douban Book</div>
+            <div class="search-box"><input type="text" placeholder="书名、作者、ISBN"></div>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="movie.html">电影</a> 
+                <a href="book.html" class="active">图书</a>
+                <a href="group.html">小组</a>
+                <a href="login.html">登录</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="section-header">
+                <h2>新书速递</h2>
+                <a href="#">更多»</a>
+            </div>
+            <!-- 这里 ID 变为 bookGrid -->
+            <div id="bookGrid" class="grid-view"></div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>热门读书标签</h3>
+                <div class="tags">
+                    <span>小说</span><span>文学</span><span>历史</span><span>科技</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="footer">&copy; 2025 Douban Lite 读书频道</div>
+    <script src="script.js"></script>
+</body>
+
+</html>

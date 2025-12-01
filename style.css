@@ -1,0 +1,147 @@
+/* === 全局基础 === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: #f7f7f7; color: #111; font-size: 13px; line-height: 1.62; }
+a { text-decoration: none; color: #37a; }
+a:hover { background-color: #37a; color: #fff; }
+
+/* === 顶部导航 === */
+.header { background-color: #f0f3f5; border-bottom: 1px solid #e3ebec; padding: 10px 0; margin-bottom: 30px; }
+.inner-header { width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.logo { color: #00b51d; font-size: 24px; font-weight: bold; margin-right: 20px; cursor: pointer; }
+.nav-links a { margin-left: 20px; color: #614e3c; font-size: 14px; padding: 5px; }
+.nav-links a.active { background-color: #e8e8e8; color: #00b51d; border-radius: 3px; }
+.search-box input { width: 260px; padding: 6px; border: 1px solid #ccc; border-radius: 3px; }
+
+/* === 布局容器 === */
+.container { width: 1040px; margin: 0 auto; display: flex; min-height: 600px; }
+.main-content { flex: 1; margin-right: 40px; }
+.sidebar { width: 300px; }
+
+/* === 通用网格 (电影/图书) === */
+.section-header { border-bottom: 1px solid #eaeaea; margin-bottom: 20px; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
+.section-header h2 { font-size: 16px; color: #111; }
+.grid-view { display: grid; grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); gap: 30px 20px; }
+.card { text-align: center; cursor: pointer; }
+.card img { width: 100%; height: 170px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.3); border-radius: 2px; }
+.card h3 { font-size: 13px; font-weight: normal; margin-top: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rating { color: #e09015; font-size: 12px; }
+
+/* === 小组页特定样式 === */
+.group-list { display: flex; flex-direction: column; gap: 20px; }
+.group-item { display: flex; align-items: flex-start; border-bottom: 1px dotted #ddd; padding-bottom: 20px; }
+.group-img { width: 48px; height: 48px; border-radius: 4px; margin-right: 15px; }
+.group-info h3 { font-size: 14px; color: #37a; margin-bottom: 5px; }
+.group-meta { color: #999; font-size: 12px; margin-bottom: 5px; }
+.group-desc { color: #666; font-size: 12px; }
+
+/* === 登录页特定样式 === */
+.login-body { background-color: #fff; } /* 登录页纯白背景 */
+.login-wrapper { width: 300px; margin: 100px auto; text-align: center; }
+.login-title { font-size: 30px; color: #00b51d; font-weight: bold; margin-bottom: 40px; }
+.login-form input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 3px; font-size: 14px; }
+.login-btn { width: 100%; background-color: #00b51d; color: white; border: none; padding: 10px; font-size: 15px; border-radius: 3px; cursor: pointer; font-weight: bold; }
+.login-btn:hover { background-color: #00a319; }
+.login-footer { margin-top: 20px; font-size: 12px; color: #999; display: flex; justify-content: space-between; }
+
+/* === 侧边栏小部件 === */
+.widget { background: #f2f7f6; padding: 15px; margin-bottom: 30px; }
+.widget h3 { color: #007722; font-size: 14px; margin-bottom: 10px; }
+.tags span { display: inline-block; background: #fff; padding: 3px 8px; margin: 3px; border-radius: 10px; color: #37a; font-size: 12px; cursor: pointer; }
+.footer { text-align: center; color: #999; margin-top: 50px; padding-bottom: 30px; }
+
+/* === 以下为详情页 (Detail Page) 专用样式 === */
+
+.detail-wrapper {
+    margin-bottom: 40px;
+}
+
+.detail-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #494949;
+    margin-bottom: 15px;
+}
+
+.detail-title .year {
+    color: #888;
+    font-weight: normal;
+}
+
+.detail-flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.detail-poster img {
+    width: 135px; /* 豆瓣经典尺寸 */
+    border-radius: 4px;
+    margin-right: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.detail-info {
+    flex: 1;
+}
+
+.detail-info p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detail-rating-block {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.big-score {
+    font-size: 28px;
+    font-weight: bold;
+    color: #494949;
+    margin-right: 10px;
+}
+
+.star-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-count {
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.detail-intro {
+    margin-top: 25px;
+}
+
+.detail-intro h3 {
+    color: #007722;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.detail-intro p {
+    text-indent: 2em;
+    line-height: 1.8;
+    color: #111;
+}
+
+/* 评论样式 */
+.comment-section {
+    margin-top: 40px;
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+}
+
+.comment-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.comment-item .user {
+    color: #37a;
+    margin-right: 5px;
+}

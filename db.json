@@ -1,0 +1,23 @@
+{
+  "movies": [
+    { "id": 1, "title": "肖申克的救赎", "rating": 9.7, "tags": ["剧情", "犯罪", "经典"], "year": "1994", "director": "弗兰克·德拉邦特", "img": "https://placehold.co/270x400/333/fff?text=Shawshank", "desc": "一场关乎希望与自由的越狱。银行家安迪被冤枉杀害妻子和情夫..." },
+    { "id": 2, "title": "霸王别姬", "rating": 9.6, "tags": ["剧情", "爱情", "经典"], "year": "1993", "director": "陈凯歌", "img": "https://placehold.co/270x400/800/fff?text=Farewell", "desc": "风华绝代，不疯魔不成活。程蝶衣与段小楼半个世纪的悲欢离合..." },
+    { "id": 3, "title": "阿甘正传", "rating": 9.5, "tags": ["剧情", "爱情", "励志"], "year": "1994", "director": "罗伯特·泽米吉斯", "img": "https://placehold.co/270x400/26a/fff?text=Gump", "desc": "Life was like a box of chocolates. 阿甘的奔跑人生..." },
+    { "id": 4, "title": "泰坦尼克号", "rating": 9.4, "tags": ["爱情", "灾难", "经典"], "year": "1997", "director": "詹姆斯·卡梅隆", "img": "https://placehold.co/270x400/123/fff?text=Titanic", "desc": "一艘永不沉没的巨轮，一段跨越生死的爱情..." },
+    { "id": 5, "title": "千与千寻", "rating": 9.4, "tags": ["动画", "奇幻", "日本"], "year": "2001", "director": "宫崎骏", "img": "https://placehold.co/270x400/e6b/fff?text=Spirited", "desc": "不能吃太胖哦，会被杀掉的！少女千寻的奇幻冒险..." },
+    { "id": 6, "title": "盗梦空间", "rating": 9.3, "tags": ["科幻", "悬疑", "美国"], "year": "2010", "director": "克里斯托弗·诺兰", "img": "https://placehold.co/270x400/000/fff?text=Inception", "desc": "梦境中的梦境，这一层是现实还是虚幻？" }
+  ],
+  "books": [
+    { "id": 101, "title": "红楼梦", "author": "曹雪芹", "rating": 9.6, "tags": ["小说", "文学", "经典"], "year": "清代", "img": "https://placehold.co/270x400/532/fff?text=RedDream", "desc": "满纸荒唐言，一把辛酸泪。都云作者痴，谁解其中味。" },
+    { "id": 102, "title": "活着", "author": "余华", "rating": 9.4, "tags": ["小说", "文学", "历史"], "year": "1993", "img": "https://placehold.co/270x400/333/fff?text=Live", "desc": "地主少爷福贵嗜赌成性，终于输光了家业一贫如洗。" },
+    { "id": 103, "title": "1984", "author": "乔治·奥威尔", "rating": 9.3, "tags": ["小说", "科幻", "政治"], "year": "1949", "img": "https://placehold.co/270x400/444/fff?text=1984", "desc": "老大哥在看着你。一部杰出的政治寓言小说。" },
+    { "id": 104, "title": "三体", "author": "刘慈欣", "rating": 8.9, "tags": ["科幻", "小说", "科技"], "year": "2006", "img": "https://placehold.co/270x400/000/fff?text=3Body", "desc": "文化大革命如火如荼进行的同时，军方探寻外星文明的绝秘计划..." }
+  ],
+  "groups": [
+    { "title": "豆瓣鹅组", "member": "683201", "desc": "这里是八卦的聚集地...", "img": "https://placehold.co/48x48/00b51d/fff?text=G", "tags": ["生活", "兴趣"] },
+    { "title": "爱猫生活", "member": "45210", "desc": "吸猫，我们是专业的。", "img": "https://placehold.co/48x48/orange/fff?text=Cat", "tags": ["生活", "兴趣"] },
+    { "title": "下厨房", "member": "12300", "desc": "今天你吃了什么？", "img": "https://placehold.co/48x48/d22/fff?text=Food", "tags": ["生活"] },
+    { "title": "极简生活", "member": "89000", "desc": "如无必要，勿增实体。", "img": "https://placehold.co/48x48/333/fff?text=Min", "tags": ["生活", "职场"] },
+    { "title": "程序员的日常", "member": "1024", "desc": "也就是修修电脑...", "img": "https://placehold.co/48x48/000/fff?text=Code", "tags": ["职场", "校园"] }
+  ]
+}

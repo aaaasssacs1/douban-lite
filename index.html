@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Douban Lite - 首页</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* === 首页特有样式 === */
+        .hero-banner {
+            background: linear-gradient(135deg, #00b51d 0%, #008a15 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .hero-banner h1 { font-size: 36px; margin-bottom: 10px; }
+        .hero-banner p { font-size: 16px; opacity: 0.9; }
+        
+        .section-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        .section-bar h2 { font-size: 20px; color: #111; border-left: 5px solid #00b51d; padding-left: 10px; }
+        .section-bar a { font-size: 13px; color: #37a; }
+
+        .home-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* 搜索结果区域样式 */
+        #globalSearchResults {
+            display: none; /* 默认隐藏 */
+            padding-top: 20px;
+        }
+        .search-result-block {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="inner-header">
+            <a href="index.html" class="logo">Douban Lite</a>
+            <!-- 修改点：给输入框添加了 ID -->
+            <div class="search-box">
+                <input type="text" id="globalSearchInput" placeholder="全站搜索：电影、图书...">
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">首页</a>
+                <a href="movie.html">电影</a>
+                <a href="book.html">图书</a>
+                <a href="group.html">小组</a>
+                <a href="login.html">登录</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" style="display: block;"> 
+        
+        <!-- 新增：搜索结果展示区 (默认隐藏) -->
+        <div id="globalSearchResults">
+            <h2 style="margin-bottom:20px; color:#333;">搜索结果</h2>
+            
+            <div class="search-result-block">
+                <div class="section-bar"><h2>匹配的电影</h2></div>
+                <div id="searchResultMovie" class="grid-view"></div>
+            </div>
+
+            <div class="search-result-block">
+                <div class="section-bar"><h2>匹配的图书</h2></div>
+                <div id="searchResultBook" class="grid-view"></div>
+            </div>
+
+            <button onclick="clearSearch()" style="margin-top:20px; padding:10px 20px; cursor:pointer;">返回首页内容</button>
+        </div>
+
+        <!-- 新增：包裹原来的默认内容，方便搜索时隐藏 -->
+        <div id="homeDefaultContent">
+            <!-- 1. 欢迎横幅 -->
+            <div class="hero-banner">
+                <h1>发现好内容</h1>
+                <p>记录你的生活，分享你的热爱</p>
+            </div>
+
+            <div class="home-grid">
+                <!-- 左侧：主要内容 -->
+                <div class="main-area">
+                    <div class="section-bar">
+                        <h2>热门电影</h2>
+                        <a href="movie.html">更多电影 »</a>
+                    </div>
+                    <div id="homeMovieGrid" class="grid-view">加载中...</div>
+
+                    <div class="section-bar">
+                        <h2>新书速递</h2>
+                        <a href="book.html">更多图书 »</a>
+                    </div>
+                    <div id="homeBookGrid" class="grid-view">加载中...</div>
+                </div>
+
+                <!-- 右侧：小组推荐 -->
+                <div class="side-area">
+                    <div class="section-bar">
+                        <h2>热门小组</h2>
+                        <a href="group.html">全部 »</a>
+                    </div>
+                    <div id="homeGroupList" class="group-list">加载中...</div>
+                    
+                    <div class="widget" style="margin-top: 30px;">
+                        <h3>关注我们要做的</h3>
+                        <p style="color:#666; font-size:12px; line-height:1.8;">
+                            Douban Lite 是一个简单的课程设计项目。<br>
+                            我们致力于提供最简洁的评分服务。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of homeDefaultContent -->
+
+    </div>
+
+    <div class="footer">&copy; 2025 Douban Lite</div>
+    <script src="script.js"></script>
+    <script>
+        // 内联脚本：简单的返回首页功能
+        function clearSearch() {
+            document.getElementById('globalSearchInput').value = '';
+            document.getElementById('globalSearchResults').style.display = 'none';
+            document.getElementById('homeDefaultContent').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

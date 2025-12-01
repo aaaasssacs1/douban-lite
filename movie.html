@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Douban Lite - 电影</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="inner-header">
+            <div class="logo">Douban Movie</div>
+            <div class="search-box"><input type="text" placeholder="搜索电影..."></div>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="movie.html" class="active">电影</a> 
+                <a href="book.html">图书</a>
+                <a href="group.html">小组</a>
+                <a href="login.html">登录</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <div class="section-header">
+                <h2>正在热映</h2>
+                <a href="#">全部正在热映»</a>
+            </div>
+            <div id="movieGrid" class="grid-view"></div>
+        </main>
+        
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>热门电影标签</h3>
+                <div class="tags">
+                    <span>科幻</span><span>悬疑</span><span>爱情</span><span>动画</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="footer">&copy; 2025 Douban Lite 电影频道</div>
+    <script src="script.js"></script>
+</body>
+</html>

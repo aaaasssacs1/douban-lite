@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Douban Lite - 详情页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="inner-header">
+            <!-- 点击 Logo 返回首页 -->
+            <a href="index.html" class="logo">Douban Lite</a>
+            <div class="search-box"><input type="text" placeholder="搜索..."></div>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="movie.html" class="active">电影</a> 
+                <a href="book.html">图书</a>
+                <a href="group.html">小组</a>
+                <a href="login.html">登录</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <!-- 详情页核心内容区 -->
+            <div id="detailContainer" class="detail-wrapper">
+                <!-- JS 会把内容渲染在这里 -->
+                <p>正在加载内容...</p>
+            </div>
+
+            <!-- 评论区 -->
+            <div class="comment-section">
+                <div class="section-header">
+                    <h2>短评</h2>
+                </div>
+
+                <!-- 新增：评论输入区域 -->
+                <div class="comment-form" style="margin-bottom: 20px;">
+                    <textarea id="commentInput" placeholder="写下你的短评..." style="width: 100%; height: 80px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; resize: none; margin-bottom: 10px;"></textarea>
+                    <button onclick="submitComment()" style="background: #37a; color: #fff; border: none; padding: 6px 15px; border-radius: 3px; cursor: pointer;">发表评论</button>
+                </div>
+
+                <!-- 评论列表容器 -->
+                <div id="commentList">
+                    <!-- 默认评论 -->
+                    <div class="comment-item">
+                        <span class="user" style="color: #37a; font-weight: bold;">User_007</span> 
+                        <span style="color: #999; font-size: 12px;">2025-12-01</span>
+                        <p style="margin-top: 5px;">太精彩了，五星推荐！</p>
+                    </div>
+                    <div class="comment-item">
+                        <span class="user" style="color: #37a; font-weight: bold;">路人甲</span>
+                        <span style="color: #999; font-size: 12px;">2025-11-20</span>
+                        <p style="margin-top: 5px;">结局很意外，值得二刷。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>喜欢这部作品的人也喜欢</h3>
+                <div class="grid-view" style="grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                    <!-- 简单的静态推荐占位 -->
+                    <div style="background:#eee; height:100px;"></div>
+                    <div style="background:#eee; height:100px;"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="footer">&copy; 2025 Douban Lite 详情页</div>
+    
+    <!-- 注意：这里只引用 script.js，不要自己写 window.onload -->
+    <script src="script.js"></script>
+</body>
+</html>
