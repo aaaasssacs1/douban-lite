@@ -65,7 +65,7 @@ douban-lite/
 ├── script.js       # 核心业务逻辑（数据、路由、交互）
 ├── db.json         # 模拟后端数据源
 └── README.md       # 项目说明文档
-
+```
 
 
 ## 🚀 如何运行
