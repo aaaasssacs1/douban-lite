@@ -46,16 +46,19 @@ async function loadData() {
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
         
+        // 填充全局变量
         movieData = data.movies;
         bookData = data.books;
         groupData = data.groups;
         console.log("数据加载成功 (From JSON)");
     } catch (error) {
         console.warn("无法读取 db.json (可能是直接打开了 HTML 文件)，使用内置备份数据。", error);
+        // 填充全局变量
         movieData = FALLBACK_DATA.movies;
         bookData = FALLBACK_DATA.books;
         groupData = FALLBACK_DATA.groups;
     } finally {
+        // 初始化页面
         initPage();
     }
 }
@@ -240,13 +243,24 @@ function initLocalSearch(currentData, containerId, type) {
 function initTags(currentData, containerId, type) {
     const tags = document.querySelectorAll('.tags span');
     tags.forEach(tag => {
+        tag.style.cursor = 'pointer';
         tag.onclick = function() {
             // 样式处理
             tags.forEach(t => { t.style.background = '#fff'; t.style.color = '#37a'; });
             this.style.background = '#00b51d';
             this.style.color = '#fff';
 
-            const tagName = this.innerText;
+            const tagName = this.innerText && this.innerText.trim();
+
+            // 如果是 "全部" 标签，则显示所有数据
+            if (tagName === '全部') {
+                if (containerId === 'groupList') {
+                    renderGroups(currentData, containerId);
+                } else {
+                    renderCards(currentData, containerId, type);
+                }
+                return;
+            }
 
             // 数据过滤
             const filteredData = currentData.filter(item => {
