@@ -100,6 +100,7 @@ function initPage() {
     else if (isGroupPage) {
         renderGroups(groupData, 'groupList');
         initTags(groupData, 'groupList', 'group'); 
+        initLocalSearch(groupData, 'groupList', 'group');
     } 
     // === 场景 5: 详情页 ===
     else if (isDetailPage) {
@@ -395,3 +396,4 @@ window.onload = function() {
     // 2. 其他页面加载数据
     loadData();
 };
+
