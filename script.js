@@ -395,5 +395,51 @@ window.onload = function() {
 
     // 2. 其他页面加载数据
     loadData();
+  
+    // 3.动态高亮导航栏
+  /**
+ * 动态高亮导航栏
+ * @param {string} currentPage - 当前频道标识符 ('movie', 'book', 'group', 'login')
+ */
+function setActiveNav(currentPage) {
+    // 1. 获取所有导航链接
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // 2. 清除所有链接上的激活状态
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // 3. 找到目标链接并激活
+    // 使用属性选择器查找 href 中包含当前频道名称的链接
+    const targetLink = document.querySelector(`.nav-links a[href*="${currentPage}.html"]`);
+    if (targetLink) {
+        targetLink.classList.add('active');
+    }
+}
+
+// --- 在主入口函数或路由分发逻辑中调用 ---
+
+// 详情页特殊处理（根据 URL 参数决定激活哪个频道）
+if (window.location.pathname.includes('detail.html')) {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type'); // type 可能是 'movie' 或 'book'
+
+    if (type) {
+        setActiveNav(type); 
+    }
+} else {
+    // 处理非详情页的频道页 (如 movie.html, book.html, group.html)
+    // 自动获取当前文件名作为激活标识
+    const path = window.location.pathname;
+    // 提取文件名 (例如：/douban-lite/movie.html -> movie)
+    const fileNameMatch = path.match(/([a-z]+)\.html$/); 
+    if (fileNameMatch) {
+        const currentPage = fileNameMatch[1];
+        setActiveNav(currentPage);
+    }
+    // 首页 (index.html) 可以单独处理或硬编码
+}
 };
+
 
