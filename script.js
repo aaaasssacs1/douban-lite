@@ -100,7 +100,6 @@ function initPage() {
     else if (isGroupPage) {
         renderGroups(groupData, 'groupList');
         initTags(groupData, 'groupList', 'group'); 
-        initLocalSearch(groupData, 'groupList', 'group');
     } 
     // === 场景 5: 详情页 ===
     else if (isDetailPage) {
@@ -441,5 +440,6 @@ if (window.location.pathname.includes('detail.html')) {
     // 首页 (index.html) 可以单独处理或硬编码
 }
 };
+
 
 
